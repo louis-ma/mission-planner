@@ -40,7 +40,7 @@ export default function CountdownApp() {
   )
   return (
     <div className="App">
-      <h1>React Countdown Demo</h1>
+      <h1>CITYUUR Mission Panner</h1>
       <button onClick={handleStart} type="button">
         Start
       </button>
