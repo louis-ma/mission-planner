@@ -1,5 +1,6 @@
 import React from 'react';
-import Box from '@mui/system/Box';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Grid from '@mui/system/Unstable_Grid';
 import styled from '@mui/system/styled';
 import Timer from "./Timer"; // for timer
@@ -20,14 +21,45 @@ export default function BasicGrid() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid xs={8}>
+
+        <Grid xs={8}> //left side
             <Example /> 
         </Grid>
-        <Grid xs={4}>
-            <Timer /> 
+
+        <Grid xs={4}> //right side
+          <Box sx={{ width: '100%' }}>
+            <Stack spacing={2}>
+              <Timer />
+              <iframe src="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/2023/2023_EXPLORER_Manual_FINAL_1_17_2023_withcover.pdf"
+                width="100%" height="600px"></iframe>
+            </Stack>
+          </Box>
         </Grid>
-        
+
+        <Grid>
+        <iframe src="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/2023/2023_EXPLORER_Manual_FINAL_1_17_2023_withcover.pdf"
+     width="100%" height="600px"></iframe>
+        </Grid>
+
       </Grid>
     </Box>
   );
 }
+
+// testing
+// <Grid xs={4}> //right side
+// <Timer /> 
+// </Grid>
+
+// <Grid>
+// <iframe src="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/2023/2023_EXPLORER_Manual_FINAL_1_17_2023_withcover.pdf"
+// width="100%" height="600px"></iframe>
+// </Grid>
+
+// <Box sx={{ width: '100%' }}>
+// <Stack spacing={2}>
+//   <Timer />
+//   <iframe src="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/2023/2023_EXPLORER_Manual_FINAL_1_17_2023_withcover.pdf"
+//     width="100%" height="600px"></iframe>
+// </Stack>
+// </Box>
